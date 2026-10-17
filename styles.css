@@ -1,0 +1,127 @@
+:root {
+  color-scheme: light;
+  font-family: "Noto Sans Thai", Tahoma, sans-serif;
+  color: #312b37;
+  background: #fff7f9;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 13% 9%, rgba(255, 194, 210, .45), transparent 24rem),
+    radial-gradient(circle at 91% 91%, rgba(255, 213, 225, .5), transparent 22rem),
+    #fffafb;
+}
+
+button, input { font: inherit; }
+
+.page-shell {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 32px 18px;
+}
+
+.login-card, .welcome-card {
+  position: relative;
+  width: min(100%, 456px);
+  overflow: hidden;
+  border: 1px solid rgba(233, 165, 184, .26);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, .94);
+  box-shadow: 0 20px 55px rgba(99, 51, 65, .12), 0 2px 7px rgba(99, 51, 65, .04);
+}
+
+.accent-line { height: 6px; background: linear-gradient(90deg, #f284a4, #ef9ab0 55%, #f8c3d0); }
+
+.card-content { padding: 38px 42px 30px; }
+
+.icon-circle {
+  display: grid;
+  width: 62px;
+  height: 62px;
+  margin: 0 auto 19px;
+  place-items: center;
+  border-radius: 50%;
+  color: #d95c82;
+  background: #fff0f4;
+}
+
+.icon-circle svg { width: 37px; height: 37px; }
+
+h1 { margin: 0; color: #322b37; font-size: clamp(1.45rem, 4vw, 1.75rem); font-weight: 700; letter-spacing: -.02em; text-align: center; }
+
+.helper-text { margin: 9px 0 29px; color: #837681; font-size: .94rem; line-height: 1.7; text-align: center; }
+
+label { display: block; margin-bottom: 9px; color: #514651; font-size: .92rem; font-weight: 600; }
+
+.input-wrap { position: relative; }
+
+.input-wrap svg { position: absolute; top: 50%; left: 15px; width: 21px; height: 21px; color: #a89ca6; transform: translateY(-50%); pointer-events: none; }
+
+input {
+  width: 100%;
+  height: 53px;
+  padding: 0 15px 0 47px;
+  border: 1px solid #e5dbe0;
+  border-radius: 11px;
+  outline: none;
+  color: #332e35;
+  background: #fff;
+  transition: border-color .18s ease, box-shadow .18s ease;
+}
+
+input::placeholder { color: #b9afb5; }
+input:focus { border-color: #e57496; box-shadow: 0 0 0 4px rgba(229, 116, 150, .14); }
+input[aria-invalid="true"] { border-color: #dc4f75; }
+
+.error-message { margin: 8px 0 0; color: #cb375e; font-size: .8rem; }
+.id-note { margin: 9px 0 24px; color: #9a8c95; font-size: .78rem; }
+
+button {
+  width: 100%;
+  min-height: 53px;
+  border: 0;
+  border-radius: 11px;
+  color: #fff;
+  background: linear-gradient(105deg, #e56b8e, #db4e79);
+  box-shadow: 0 9px 16px rgba(210, 74, 112, .23);
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform .16s ease, box-shadow .16s ease;
+}
+
+button:hover { transform: translateY(-1px); box-shadow: 0 11px 19px rgba(210, 74, 112, .28); }
+button:focus-visible { outline: 3px solid rgba(211, 69, 111, .38); outline-offset: 3px; }
+button span { margin-left: 7px; font-size: 1.08em; }
+
+.demo-note { margin: 24px 0 0; color: #9e939a; font-size: .72rem; line-height: 1.65; text-align: center; }
+
+.welcome-content { padding-top: 43px; text-align: center; }
+.success-icon { color: #d95c82; }
+.success-icon svg { width: 32px; }
+.eyebrow { margin: 0 0 4px; color: #d95c82; font-size: .85rem; font-weight: 600; }
+.welcome-content .helper-text { margin-bottom: 8px; }
+.helper-text #displayStudentId { color: #c94770; font-weight: 700; }
+.student-card-preview { margin: 3px auto 0; }
+.student-card-preview img { display: block; width: min(100%, 310px); max-height: 460px; margin: 0 auto; border-radius: 15px; box-shadow: 0 13px 25px rgba(44, 32, 42, .18); object-fit: contain; }
+.student-card-preview figcaption { margin-top: 11px; color: #998c95; font-size: .75rem; }
+.unknown-id-message { margin: 18px 0 0; color: #be3158; font-size: .9rem; font-weight: 600; }
+.student-card-preview:has(img[src=""]) { display: none; }
+.secondary-button { margin-top: 25px; color: #c34d70; background: #fff2f5; box-shadow: none; }
+.secondary-button:hover { background: #ffe8ee; box-shadow: none; }
+.secondary-button span { margin: 0 7px 0 0; }
+
+[hidden] { display: none !important; }
+
+@media (max-width: 440px) {
+  .page-shell { padding: 18px 14px; }
+  .login-card, .welcome-card { border-radius: 20px; }
+  .card-content { padding: 32px 25px 25px; }
+}
+
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; } }

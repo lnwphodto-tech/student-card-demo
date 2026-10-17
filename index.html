@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="เดโมหน้าเข้าสู่ระบบนักศึกษา" />
+    <title>เข้าสู่ระบบนักศึกษา</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="login-card" id="loginScreen" aria-labelledby="loginTitle">
+        <div class="accent-line" aria-hidden="true"></div>
+        <div class="card-content">
+          <div class="icon-circle" aria-hidden="true">
+            <svg viewBox="0 0 64 64" role="img" fill="none">
+              <path d="M4 25.5 32 12l28 13.5L32 39 4 25.5Z" fill="currentColor" />
+              <path d="M15 31.2V43c0 4.9 7.6 8.9 17 8.9S49 47.9 49 43V31.2L32 39 15 31.2Z" fill="currentColor" opacity=".86" />
+              <path d="M58.6 27v14.7" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+              <circle cx="58.6" cy="44.6" r="3.3" fill="currentColor" />
+            </svg>
+          </div>
+
+          <h1 id="loginTitle">เข้าสู่ระบบนักศึกษา</h1>
+          <p class="helper-text">โปรดระบุรหัสนักศึกษาเพื่อดำเนินการต่อ</p>
+
+          <form id="studentForm" novalidate>
+            <label for="studentId">รหัสนักศึกษา</label>
+            <div class="input-wrap">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none">
+                <path d="M4 20.5c0-3.2 3.6-5.5 8-5.5s8 2.3 8 5.5M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+              </svg>
+              <input id="studentId" name="studentId" type="text" inputmode="numeric" autocomplete="username" placeholder="กรอกรหัสนักศึกษา" aria-describedby="studentIdError" />
+            </div>
+            <p id="studentIdError" class="error-message" role="alert" hidden>กรุณากรอกรหัสนักศึกษา</p>
+          <p class="id-note">กรอกรหัสนักศึกษาเพื่อดูบัตรตัวอย่าง</p>
+            <button type="submit">เข้าสู่ระบบ <span aria-hidden="true">→</span></button>
+          </form>
+
+          <p class="demo-note">หน้าเดโมสำหรับการนำเสนอเท่านั้น ไม่มีการตรวจสอบข้อมูลกับสถาบันจริง</p>
+        </div>
+      </section>
+
+      <section class="welcome-card" id="welcomeScreen" aria-labelledby="welcomeTitle" hidden>
+        <div class="accent-line" aria-hidden="true"></div>
+        <div class="card-content welcome-content">
+          <div class="icon-circle success-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="m5 12.5 4.3 4.3L19 7.2" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          </div>
+          <p class="eyebrow">บัตรนักศึกษาตัวอย่าง</p>
+          <h1 id="welcomeTitle" tabindex="-1">ค้นพบข้อมูลของคุณ</h1>
+          <p class="helper-text">รหัสนักศึกษา <span id="displayStudentId"></span></p>
+          <figure class="student-card-preview">
+            <img id="studentCardImage" src="" alt="บัตรนักศึกษาตัวอย่าง" />
+            <figcaption>บัตรนักศึกษาที่ตรงกับรหัสที่ระบุ</figcaption>
+          </figure>
+          <p id="unknownIdMessage" class="unknown-id-message" role="alert" hidden>ไม่พบรูปบัตรสำหรับรหัสนี้ในข้อมูลตัวอย่าง</p>
+          <p class="demo-note">รูปบัตรนี้เป็นข้อมูลตัวอย่างในเครื่องเท่านั้น ไม่ได้เชื่อมต่อกับระบบสถาบัน</p>
+          <button class="secondary-button" type="button" id="backButton"><span aria-hidden="true">←</span> กลับไปแก้ไขรหัส</button>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
