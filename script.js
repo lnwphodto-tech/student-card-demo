@@ -12,7 +12,7 @@ const studentCards = {
   "62031196": "62031196.jpg",
   "62031197": "62031197.png",
   "62031198": "62031198.png",
-  "63014538": "https://raw.githubusercontent.com/lnwphodto-tech/Student-ID-Card/main/assets/student-cards/63014538.jpg",
+  "63014538": "63014538.jpg",
   "63016979": "63016979.jpg",
   "63041001": "63041001.png",
   "63041541": "63041541.png",
